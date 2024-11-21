@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Cybersecurity Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">CyberSec Blog</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+          <option value="general">General Inquiry</option>
+          <option value="articles">Article Suggestion</option>
+          <option value="resources">Resource Request</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 CyberSec Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
