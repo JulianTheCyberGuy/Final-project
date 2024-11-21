@@ -25,10 +25,28 @@ header {
     padding: 0 20px;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
 .logo {
-    color: #F1F1F1; /* Light text for logo */
-    font-size: 28px;
-    font-weight: bold;
+    width: 40px; /* Adjust the size of the logo */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    color: #F1F1F1; /* Color for the logo text */
+    font-size: 28px; /* Size of the logo text */
+    font-weight: bold; /* Make the logo text bold */
+}
+
+.vertical-line {
+    width: 1px; /* Width of the vertical line */
+    height: 40px; /* Height of the vertical line */
+    background-color: #FFFFFF; /* Color of the vertical line (white) */
+    margin: 0 10px; /* Space around the line */
 }
 
 .nav-links {
