@@ -193,7 +193,7 @@ footer {
 }
 
 .social-icon img {
-    width: 25px; /* Size of social media icons */
+    width: 30px; /* Adjust the size of the social media icons */
     height: auto;
     transition: transform 0.3s;
 }
