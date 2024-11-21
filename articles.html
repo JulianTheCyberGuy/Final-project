@@ -21,36 +21,36 @@
   <main>
     <section class="articles-list">
       <h2>All Articles</h2>
-      <div class="articles-grid">
-        <div class="article">
-          <h3><a href="https://www.gartner.com/en/cybersecurity/topics/cybersecurity-trends" target="_blank">Gartner's Top Trends in Cybersecurity</a></h3>
-          <p>The Gartner Top Trends in Cybersecurity report outlines the key trends shaping the cybersecurity landscape.</p>
-        </div>
-        <div class="article">
-          <h3><a href="https://socradar.io/the-2024-mid-year-cybersecurity-review-report/" target="_blank">2024 Mid-Year Cybersecurity Review</a></h3>
-          <p>This report provides insights into the current state of cybersecurity and its evolving challenges.</p>
-        </div>
-        <div class="article">
-          <h3><a href="https://www.weforum.org/stories/2024/02/what-does-2024-have-in-store-for-the-world-of-cybersecurity/" target="_blank">What Does 2024 Have in Store for Cybersecurity?</a></h3>
-          <p>Explore the predictions for cybersecurity in 2024 and the emerging trends security teams should watch.</p>
-        </div>
-        <div class="article">
-          <h3><a href="https://cyberscoop.com/microsoft-launches-zero-day-quest-competition-to-enhance-cloud-and-ai-security/" target="_blank">Microsoft Launches Zero-Day Quest Competition</a></h3>
-          <p>Microsoft's initiative to enhance cloud and AI security through competitive engagement.</p>
-        </div>
-        <div class="article">
-          <h3><a href="https://truefort.com/mother-of-all-breaches/" target="_blank">Mother of All Breaches</a></h3>
-          <p>An analysis of a massive data leak and its implications for data security.</p>
-        </div>
-        <div class="article">
-          <h3><a href="https://socradar.io/top-10-threat-actors-of-2024-beyond-the-numbers/" target="_blank">Top 10 Threat Actors of 2024</a></h3>
-          <p>A look at the most significant threat actors anticipated in 2024 and their potential impact.</p>
-        </div>
+      <button id="find-new-articles" onclick="fetchArticles()">Find New Articles</button>
+      <div class="articles-grid" id="articles-grid">
+        <!-- Articles will be dynamically inserted here -->
       </div>
     </section>
   </main>
   <footer>
     <p>&copy; 2024 CyberSec Blog. All rights reserved.</p>
   </footer>
+
+  <script>
+    async function fetchArticles() {
+      const response = await fetch('articles.json');
+      const articles = await response.json();
+      const articlesGrid = document.getElementById('articles-grid');
+      articlesGrid.innerHTML = ''; // Clear existing articles
+
+      articles.forEach(article => {
+        const articleDiv = document.createElement('div');
+        articleDiv.className = 'article';
+        articleDiv.innerHTML = `
+          <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+          <p>${article.description || 'No description available.'}</p>
+        `;
+        articlesGrid.appendChild(articleDiv);
+      });
+    }
+
+    // Call this function to fetch articles when the page loads
+    window.onload = fetchArticles;
+  </script>
 </body>
 </html>
