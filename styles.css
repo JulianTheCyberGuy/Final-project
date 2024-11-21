@@ -2,17 +2,17 @@
 
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif; /* Easy to read font */
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #D6E5E3; /* Light background */
-    color: #424874; /* Dark text color */
+    background-color: #F1F1F1; /* Light background */
+    color: #2A2D33; /* Dark text color */
 }
 
 /* Header Styles */
 header {
-    background-color: #424874; /* Dark header */
+    background-color: #2A2D33; /* Dark header */
     padding: 20px 0;
 }
 
@@ -26,8 +26,8 @@ header {
 }
 
 .logo {
-    color: #DCD6F7; /* Light text for logo */
-    font-size: 24px;
+    color: #F1F1F1; /* Light text for logo */
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -41,36 +41,37 @@ header {
 }
 
 .nav-links a {
-    color: #DCD6F7; /* Light link color */
+    color: #F1F1F1; /* Light link color */
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 16px;
 }
 
 .nav-links a:hover {
-    color: #A6B1E1; /* Hover effect */
+    color: #007BFF; /* Hover effect */
 }
 
 /* Hero Section Styles */
 .hero {
-    background-color: #A6B1E1; /* Soft background for hero */
-    color: #424874;
+    background-color: #007BFF; /* Bright blue for hero */
+    color: #F1F1F1;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
 .btn {
-    background-color: #B8C4D8; /* Updated button color */
-    color: #424874; /* Button text color */
+    background-color: #E9E9E9; /* Light gray button */
+    color: #2A2D33; /* Dark button text color */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -78,7 +79,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #DCD6F7; /* Button hover effect */
+    background-color: #F1F1F1; /* Button hover effect */
 }
 
 /* Featured Articles Section */
@@ -89,7 +90,7 @@ header {
 .featured-articles h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #424874;
+    color: #2A2D33;
 }
 
 .articles-grid {
@@ -101,11 +102,12 @@ header {
 }
 
 .article {
-    background-color: #DCD6F7; /* Article card background */
+    background-color: #F1F1F1; /* Article card background */
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
 .article img {
@@ -114,12 +116,12 @@ header {
 }
 
 .article h3 {
-    color: #424874;
+    color: #2A2D33;
     margin: 15px 0 10px;
 }
 
 .article p {
-    color: #424874;
+    color: #4B4F54; /* Dark gray for article text */
 }
 
 /* Article Hover Effect */
@@ -131,8 +133,8 @@ header {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #424874; /* Dark footer */
-    color: #DCD6F7; /* Light footer text */
+    background-color: #2A2D33; /* Dark footer */
+    color: #F1F1F1; /* Light footer text */
 }
 
 footer p {
