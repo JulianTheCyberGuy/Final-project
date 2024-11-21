@@ -129,14 +129,89 @@ header {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #2A2D33; /* Dark footer */
-    color: #F1F1F1; /* Light footer text */
+/* Contact Section Styles */
+.contact-section {
+    padding: 40px 20px;
 }
 
-footer p {
-    margin: 0;
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2A2D33;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+    background: #F1F1F1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-section input,
+.contact-section select,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF
+}
+
+footer {
+    background-color: #2A2D33; /* Dark background for footer */
+    color: #F1F1F1; /* Light text color */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px; /* Smaller font size for the entire footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.social-media {
+    margin-bottom: 10px; /* Adjusted margin for better spacing */
+}
+
+.social-icon {
+    margin: 0 5px; /* Adjusted margin for better spacing */
+}
+
+.social-icon img {
+    width: 25px; /* Size of social media icons */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.contact-info,
+.legal-info {
+    margin-bottom: 5px; /* Adjusted margin for better spacing */
+}
+
+.legal-info a {
+    color: #F1F1F1; /* Light link color */
+    text-decoration: none;
+}
+
+.legal-info a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
