@@ -14,7 +14,12 @@
                 <div class="vertical-line"></div> <!-- Vertical line -->
                 <div class="logo-text">CyberSec Blog</div>
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-button" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="articles.html">Articles</a></li>
                 <li><a href="resources.html">Resources</a></li>
@@ -66,5 +71,35 @@
             </div>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            let overlay = document.querySelector('.overlay');
+
+            // Check if the overlay already exists
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.classList.add('overlay');
+                document.body.appendChild(overlay); // Add overlay when menu opens
+
+                // Close menu when overlay is clicked
+                overlay.onclick = function() {
+                    navLinks.classList.remove('show'); // Hide the menu
+                    document.body.removeChild(overlay); // Remove the overlay
+                };
+            }
+
+            // Toggle the menu visibility
+            navLinks.classList.toggle('show');
+
+            // If the menu is being opened, add the overlay
+            if (navLinks.classList.contains('show')) {
+                overlay.style.display = 'block'; // Show the overlay
+            } else {
+                overlay.style.display = 'none'; // Hide the overlay
+                document.body.removeChild(overlay); // Remove the overlay when closing
+            }
+        }
+    </script>
 </body>
 </html>

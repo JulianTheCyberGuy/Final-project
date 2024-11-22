@@ -16,15 +16,6 @@ header {
     padding: 20px 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
 .logo-container {
     display: flex;
     align-items: center; /* Center vertically */
@@ -48,25 +39,112 @@ header {
     background-color: #FFFFFF; /* Color of the vertical line (white) */
     margin: 0 10px; /* Space around the line */
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2A2D33; /* Dark header */
+    padding: 20px 0;
+}
 
 .nav-links {
     list-style: none;
     display: flex;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 20px; /* Increase margin for better spacing */
 }
 
 .nav-links a {
     color: #F1F1F1; /* Light link color */
     text-decoration: none;
     transition: color 0.3s;
-    font-size: 16px;
+    font-size: 18px; /* Increase font size for better readability */
+    padding: 10px; /* Add padding for larger clickable area */
 }
 
 .nav-links a:hover {
     color: #007BFF; /* Hover effect */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px; /* Padding around the button */
+}
+
+.line {
+    width: 30px; /* Width of the hamburger lines */
+    height: 3px; /* Height of the hamburger lines */
+    background-color: #F1F1F1; /* Color of the lines */
+    margin: 5px 0; /* Space between lines */
+    transition: all 0.3s; /* Smooth transition */
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    z-index: 999; /* On top of other content */
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center the links */
+    position: absolute; /* Positioning for dropdown */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    background-color: #2A2D33; /* Background color for dropdown */
+    width: 70%; /* Width of the menu */
+    height: 100%; /* Full height */
+    padding-top: 60px; /* Space for the logo */
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.nav-links.show {
+    transform: translateX(0); /* Slide in */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default in mobile view */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning for dropdown */
+        top: 0; /* Align to the top */
+        right: 0; /* Align to the right */
+        background-color: #2A2D33; /* Background color for dropdown */
+        width: 70%; /* Width of the menu */
+        height: 100%; /* Full height */
+        padding-top: 60px; /* Space for the logo */
+        transform: translateX(100%); /* Start off-screen */
+        transition: transform 0.3s ease; /* Smooth transition */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+        transform: translateX(0); /* Slide in */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
 }
 
 /* Hero Section Styles */
