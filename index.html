@@ -15,11 +15,17 @@
                 <div class="logo-text">CyberSec Blog</div>
             </div>
             <button class="hamburger" id="hamburger-button" onclick="toggleMenu()">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
             </button>
-            <ul class="nav-links" id="nav-links">
+            <ul class="nav-links1" id="nav-links1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav-links2" id="nav-links2">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="articles.html">Articles</a></li>
                 <li><a href="resources.html">Resources</a></li>
@@ -28,7 +34,7 @@
         </nav>
     </header>
   <main>
-    <section class="hero">
+    <section class="hello">
       <h1>Welcome to CyberSec Blog</h1>
       <p>Your source for the latest in cybersecurity news, tips, and resources.</p>
       <a href="articles.html" class="btn">Explore Articles</a>
@@ -77,33 +83,45 @@
     </footer>
     <script>
         function toggleMenu() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('show'); // Toggle the 'show' class to show/hide links
-
+            const navLinks2 = document.getElementById('nav-links2');
+            let overlay = document.querySelector('.overlay');
+    
             // Check if the overlay already exists
             if (!overlay) {
                 overlay = document.createElement('div');
                 overlay.classList.add('overlay');
                 document.body.appendChild(overlay); // Add overlay when menu opens
-
+    
                 // Close menu when overlay is clicked
                 overlay.onclick = function() {
-                    navLinks.classList.remove('show'); // Hide the menu
+                    navLinks2.classList.remove('show'); // Hide the menu
                     document.body.removeChild(overlay); // Remove the overlay
                 };
             }
-
+    
             // Toggle the menu visibility
-            navLinks.classList.toggle('show');
-
-            // If the menu is being opened, add the overlay
-            if (navLinks.classList.contains('show')) {
+            navLinks2.classList.toggle('show');
+    
+            // If the menu is being opened, show the overlay
+            if (navLinks2.classList.contains('show')) {
                 overlay.style.display = 'block'; // Show the overlay
             } else {
                 overlay.style.display = 'none'; // Hide the overlay
                 document.body.removeChild(overlay); // Remove the overlay when closing
             }
         }
+    
+        // Optional: Add an event listener to handle window resize
+        window.addEventListener('resize', () => {
+            const navLinks1 = document.getElementById('nav-links1');
+            const navLinks2 = document.getElementById('nav-links2');
+    
+            // If the window is resized to a width greater than 768px, ensure nav-links1 is visible
+            if (window.innerWidth > 768) {
+                navLinks1.style.display = 'flex'; // Show nav-links1
+                navLinks2.classList.remove('show'); // Ensure nav-links2 is hidden
+            }
+        });
     </script>
 </body>
 </html>

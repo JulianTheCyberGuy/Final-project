@@ -47,18 +47,18 @@ header {
     padding: 20px 0;
 }
 
-.nav-links {
+.nav-links1 {
     list-style: none;
     display: flex;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
 }
 
-.nav-links li {
+.nav-links1 li {
     margin: 0 20px; /* Increase margin for better spacing */
 }
 
-.nav-links a {
+.nav-links1 a {
     color: #F1F1F1; /* Light link color */
     text-decoration: none;
     transition: color 0.3s;
@@ -66,25 +66,56 @@ header {
     padding: 10px; /* Add padding for larger clickable area */
 }
 
-.nav-links a:hover {
+.nav-links1 a:hover {
     color: #007BFF; /* Hover effect */
 }
 
-/* Hamburger Menu Styles */
+/* Hamburger Button Styles */
 .hamburger {
-    display: none; /* Hidden by default */
-    background: none; /* No background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Width of the hamburger menu */
+    height: 30px; /* Height of the hamburger menu */
+    background: transparent; /* No background */
     border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    padding: 10px; /* Padding around the button */
+    cursor: pointer; /* Pointer cursor */
+    padding: 0; /* No padding */
+    z-index: 1002; /* Ensure it appears above other elements */
 }
 
-.line {
-    width: 30px; /* Width of the hamburger lines */
-    height: 3px; /* Height of the hamburger lines */
-    background-color: #F1F1F1; /* Color of the lines */
-    margin: 5px 0; /* Space between lines */
-    transition: all 0.3s; /* Smooth transition */
+/* Hamburger Lines */
+.line:nth-child(1) {
+    width: 100%; /* Full width of the button */
+    height: 1px; /* Height of each line */
+    background-color: #000; /* Color of the lines */
+    transition: all 0.3s ease; /* Smooth transition for animations */
+}
+
+.line:nth-child(2) {
+    width: 100%; /* Full width of the button */
+    height: 1px; /* Height of each line */
+    background-color: #000; /* Color of the lines */
+    transition: all 0.3s ease; /* Smooth transition for animations */
+}
+.line:nth-child(3) {
+    width: 100%; /* Full width of the button */
+    height: 1px; /* Height of each line */
+    background-color: #000; /* Color of the lines */
+    transition: all 0.3s ease; /* Smooth transition for animations */
+}
+
+/* Active/Animation Styles */
+.hamburger.open .line:nth-child(1) {
+    transform: translateY(13px) rotate(45deg); /* Rotate top line */
+}
+
+.hamburger.open .line:nth-child(2) {
+    opacity: 0; /* Hide middle line */
+}
+
+.hamburger.open .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg); /* Rotate bottom line */
 }
 
 /* Overlay Styles */
@@ -96,33 +127,34 @@ header {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    z-index: 999; /* On top of other content */
+    z-index: 1000; /* Ensure it is below the nav-links */
 }
 
 /* Navigation Links Styles */
-.nav-links {
+.nav-links2 {
     display: flex;
     flex-direction: column; /* Stack links vertically */
     align-items: center; /* Center the links */
     position: absolute; /* Positioning for dropdown */
     top: 0; /* Align to the top */
     right: 0; /* Align to the right */
-    background-color: #2A2D33; /* Background color for dropdown */
-    width: 70%; /* Width of the menu */
+    background-color: #fff; /* Background color for dropdown */
+    width: 100%; /* Set width to 100% of the viewport */
     height: 100%; /* Full height */
     padding-top: 60px; /* Space for the logo */
     transform: translateX(100%); /* Start off-screen */
     transition: transform 0.3s ease; /* Smooth transition */
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1001; /* Ensure it appears above the overlay */
 }
 
-.nav-links.show {
+/* Show nav-links when hamburger is open */
+.nav-links2.show {
     transform: translateX(0); /* Slide in */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-links {
+    .nav-links1 {
         display: none; /* Hide links by default in mobile view */
         flex-direction: column; /* Stack links vertically */
         position: absolute; /* Positioning for dropdown */
@@ -136,7 +168,6 @@ header {
         transition: transform 0.3s ease; /* Smooth transition */
         z-index: 1000; /* Ensure it appears above other content */
     }
-
     .nav-links.show {
         display: flex; /* Show links when toggled */
         transform: translateX(0); /* Slide in */
@@ -147,20 +178,20 @@ header {
     }
 }
 
-/* Hero Section Styles */
-.hero {
-    background-color: #007BFF; /* Bright blue for hero */
+/* hello Section Styles */
+.hello {
+    background-color: #007BFF; /* Bright blue for hello */
     color: #F1F1F1;
     text-align: center;
     padding: 60px 20px;
 }
 
-.hero h1 {
+.hello h1 {
     font-size: 40px;
     margin-bottom: 15px;
 }
 
-.hero p {
+.hello p {
     font-size: 20px;
     margin-bottom: 25px;
 }
