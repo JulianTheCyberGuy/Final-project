@@ -44,9 +44,10 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #2A2D33; /* Dark header */
-    padding: 20px 0;
+    padding: 1px 0;
 }
 
+/* Navigation Links Styles */
 .nav-links {
     list-style: none;
     display: flex;
@@ -55,19 +56,27 @@ header {
 }
 
 .nav-links li {
-    margin: 0 20px; /* Increase margin for better spacing */
+    margin: 0 25px; /* Increased margin for better spacing */
 }
 
 .nav-links a {
     color: #F1F1F1; /* Light link color */
     text-decoration: none;
-    transition: color 0.3s;
-    font-size: 18px; /* Increase font size for better readability */
-    padding: 10px; /* Add padding for larger clickable area */
+    transition: color 0.3s, background-color 0.3s; /* Transition for color and background */
+    font-size: 16px; /* Font size */
+    padding: 10px 15px; /* Padding for larger clickable area */
+    border-radius: 5px; /* Rounded corners */
 }
 
 .nav-links a:hover {
-    color: #007BFF; /* Hover effect */
+    color: #FFFFFF; /* Change text color on hover */
+    background-color: #007BFF; /* Background color on hover */
+}
+
+.nav-links a.active {
+    color: #007BFF; /* Active link color */
+    font-weight: bold; /* Make active link bold */
+    border-bottom: 2px solid #007BFF; /* Underline for active link */
 }
 
 /* hello Section Styles */
