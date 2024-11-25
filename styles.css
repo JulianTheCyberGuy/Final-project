@@ -33,12 +33,20 @@ header {
     font-weight: bold; /* Make the logo text bold */
 }
 
-.vertical-line {
+.vertical-line1 {
     width: 1px; /* Width of the vertical line */
     height: 40px; /* Height of the vertical line */
     background-color: #FFFFFF; /* Color of the vertical line (white) */
     margin: 0 10px; /* Space around the line */
 }
+
+.vertical-line2 {
+    width: 2px; /* Width of the vertical line */
+    height: 35px; /* Height of the vertical line */
+    background-color: #FFFFFF; /* Color of the vertical line (white) */
+    margin: 0 10px; /* Space around the line */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
