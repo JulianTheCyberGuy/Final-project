@@ -28,5 +28,75 @@
         "title": "Top 10 Threat Actors of 2024",
         "description": "A look at the most significant threat actors anticipated in 2024 and their potential impact.",
         "url": "https://socradar.io/top-10-threat-actors-of-2024-beyond-the-numbers/"
+    },
+    {
+        "title": "Track These 7 Trends for Proactive Cybersecurity in 2024",
+        "description": "Analyzes trends like AI integration, the persistent risk of remote work, and challenges in mobile security.",
+        "url": "https://www.isaca.org/resources/news-and-trends/newsletters/2024/trends-for-proactive-cybersecurity"
+    },
+    {
+        "title": "7 Cybersecurity Predictions to Look Out for in 2024",
+        "description": "Covers predictions such as the rise of AI-powered security tools and increasing internet regulation.",
+        "url": "https://www.techradar.com/news/cybersecurity-predictions-2024"
+    },
+    {
+        "title": "Top Cybersecurity Challenges for Businesses in 2024",
+        "description": "Discusses the most pressing cybersecurity challenges businesses will face, including sophisticated attacks and AI-driven threats.",
+        "url": "https://www.csoonline.com"
+    },
+    {
+        "title": "AI in Cybersecurity: Boon or Bane?",
+        "description": "Evaluates the dual impact of AI on enhancing cybersecurity while also introducing new vulnerabilities.",
+        "url": "https://www.forbes.com/ai-in-cybersecurity-2024"
+    },
+    {
+        "title": "Emerging Trends in Cybersecurity Regulation Worldwide",
+        "description": "Explores global efforts to regulate technology and ensure online safety.",
+        "url": "https://techcrunch.com"
+    },
+    {
+        "title": "How Organizations Can Defend Against Sophisticated Threat Actors in 2024",
+        "description": "Focuses on threat actors and how businesses can prepare for evolving cyber risks.",
+        "url": "https://socradar.io"
+    },
+    {
+        "title": "AI-Enabled Phishing: The Next Frontier",
+        "description": "Discusses the rise of AI-enhanced phishing and tools to counteract them.",
+        "url": "https://nordvpn.com"
+    },
+    {
+        "title": "MITRE's Top 25 Most Dangerous Software Weaknesses (2024)",
+        "description": "Discusses the most common and hazardous software vulnerabilities from 2023–2024, affecting over 31,000 disclosed vulnerabilities.",
+        "url": "https://www.bleepingcomputer.com"
+    },
+    {
+        "title": "Microsoft Disrupts ONNX Phishing Network",
+        "description": "Highlights Microsoft's actions against a phishing service and seizure of 240 related websites to curb global cybercrime.",
+        "url": "https://www.securityweek.com"
+    },
+    {
+        "title": "2,000 Palo Alto Firewalls Hacked",
+        "description": "An analysis of two recent vulnerabilities exploited in Palo Alto firewalls and the risks posed by these breaches.",
+        "url": "https://www.bleepingcomputer.com"
+    },
+    {
+        "title": "AI and Cloud Security: Wiz Acquires Dazz for $450 Million",
+        "description": "Details Wiz’s acquisition to expand capabilities in AI-enhanced cloud security and compliance.",
+        "url": "https://www.crn.com"
+    },
+    {
+        "title": "Generative AI Security Startup Secures $18M in Funding",
+        "description": "Features Prompt Security's efforts to secure generative AI tools and the $18M funding boost it received.",
+        "url": "https://www.businessinsider.com"
+    },
+    {
+        "title": "Over 145,000 ICS Systems Found Exposed Online",
+        "description": "A report on industrial control systems' exposure across 175 countries, emphasizing the cybersecurity risks they pose.",
+        "url": "https://www.thehackernews.com"
+    },
+    {
+        "title": "Fortinet VPN Flaws Allow Hidden Brute-Force Attacks",
+        "description": "Discusses a newly discovered vulnerability in Fortinet VPNs, potentially hiding successful brute-force logins.",
+        "url": "https://www.bleepingcomputer.com"
     }
 ]
