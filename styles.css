@@ -11,9 +11,19 @@ body {
 }
 
 /* Header Styles */
-header {
+.header1 {
     background-color: #2A2D33; /* Dark header */
     padding: 20px 0;
+}
+
+/* Sticky Header Styles */
+.header2 {
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: #2A2D33; /* Background color for the header */
+    padding: 10px 0; /* Padding for the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 
 .logo-container {
