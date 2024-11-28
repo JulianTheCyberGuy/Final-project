@@ -16,7 +16,7 @@
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="articles.html">Articles</a></li>
+                <li><a href="articles.html" class="active">Articles</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -51,5 +51,29 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        async function fetchArticles() {
+            const response = await fetch('articles.json');
+            const articles = await response.json();
+            const articlesGrid = document.getElementById('articles-grid');
+            articlesGrid.innerHTML = ''; // Clear existing articles
+    
+            const maxArticles = 9; // Maximum number of articles to display
+    
+            articles.slice(0, maxArticles).forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.className = 'article';
+                articleDiv.innerHTML = `
+                    <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+                    <p>${article.description || 'No description available.'}</p>
+                `;
+                articlesGrid.appendChild(articleDiv);
+            });
+        }
+    
+        // Call this function to fetch articles when the page loads
+        window.onload = fetchArticles;
+    </script>
 </body>
 </html>
