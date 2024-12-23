@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the website responsive by setting the viewport to match the device's width -->
+  <title>Cybersecurity Blog</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for styling -->
+</head>
+<body>
+    <header class="header1">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="images/cybersecurity.png" alt="Cybersecurity Logo" class="logo"> <!-- Displays the Cybersecurity logo with alternative text for accessibility -->
+                <div class="vertical-line1"></div> <!-- Vertical line for decorative purposes -->
+                <div class="logo-text">CyberSec Blog</div> <!-- Displays the title of the blog -->
+            </div>
+            <ul class="nav-links" id="nav-links"> <!-- Contains navigation links for the website -->
+                <li><a href="index.html" class="active">Home</a></li> <!-- Links to the home page -->
+                <li><a href="articles.html">Articles</a></li> <!-- Links to the articles page -->
+                <li><a href="resources.html">Resources</a></li> <!-- Links to the resources page -->
+                <li><a href="contact.html">Contact</a></li> <!-- Links to the contact page -->
+            </ul>
+        </nav>
+    </header>
+  <!-- Main Content -->
+  <main>
+    <section class="hello"> <!-- Introduction section -->
+      <h1>Welcome to CyberSec Blog</h1> <!-- Main heading of the welcome section -->
+      <p>Your source for the latest in cybersecurity news, tips, and resources.</p> <!-- Descriptive paragraph -->
+      <a href="articles.html" class="btn">Explore Articles</a> <!-- Call-to-action button linking to the articles page -->
+    </section>
+    
+    <section class="featured-articles"> <!-- Section for featured articles -->
+      <h2>Featured Articles</h2> <!-- Heading for the articles section -->
+      <div class="articles-grid"> <!-- Grid layout for displaying articles -->
+        <div class="article"> <!-- Individual article block -->
+          <h3><a href="https://www.gartner.com/en/cybersecurity/topics/cybersecurity-trends" target="_blank">Gartner's Top Trends in Cybersecurity</a></h3> <!-- Article title with link -->
+          <p>The Gartner Top Trends in Cybersecurity report outlines the key trends shaping the cybersecurity landscape.</p> <!-- Brief description of the article -->
+        </div>
+        <div class="article"> <!-- Another article block -->
+          <h3><a href="https://socradar.io/the-2024-mid-year-cybersecurity-review-report/" target="_blank">2024 Mid-Year Cybersecurity Review</a></h3>
+          <p>This report provides insights into the current state of cybersecurity and its evolving challenges.</p>
+        </div>
+        <div class="article"> <!-- Another article block -->
+          <h3><a href="https://cyberscoop.com/microsoft-launches-zero-day-quest-competition-to-enhance-cloud-and-ai-security/" target="_blank">Microsoft Launches Zero-Day Quest Competition</a></h3>
+          <p>Microsoft's initiative to enhance cloud and AI security through competitive engagement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-tools"> <!-- Section for featured tools -->
+      <h2>Featured Tools</h2> <!-- Heading for the tools section -->
+      <table class="featured-table"> <!-- Table for displaying tools -->
+          <tr>
+              <th>Image</th> <!-- Column heading for tool images -->
+              <th>Description</th> <!-- Column heading for tool descriptions -->
+              <th></th> <!-- Empty column for additional options -->
+          </tr>
+          <tr> <!-- Tool row -->
+              <td><a href="https://www.kali.org" target="_blank">Kali Linux</a></td> <!-- Tool name with link -->
+              <td>Kali Linux is a Debian-based Linux distribution aimed at advanced Penetration Testing and Security Auditing.</td> <!-- Tool description -->
+          </tr>
+          <tr> <!-- Tool row -->
+              <td><a href="https://www.wireshark.org" target="_blank">Wireshark</a></td>
+              <td>Wireshark is the world's foremost and widely-used network protocol analyzer.</td>
+          </tr>
+          <tr> <!-- Tool row -->
+              <td><a href="https://www.metasploit.com" target="_blank">Metasploit</a></td>
+              <td>The Metasploit Framework is the most commonly used penetration testing tool in the world.</td>
+          </tr>
+      </table>
+  </section>
+  </main>
+  <footer> <!-- Footer section -->
+    <div class="footer-content">
+        <div class="social-media"> <!-- Social media links -->
+            <a href="https://github.com/JulianTheCyberGuy" target="_blank" class="social-icon">
+                <img src="images/github.png" alt="Github"> <!-- GitHub link with icon -->
+            </a>
+            <a href="https://www.instagram.com/julianflorezcamel/" target="_blank" class="social-icon">
+                <img src="images/instagram.png" alt="Instagram"> <!-- Instagram link with icon -->
+            </a>
+        </div>
+        <div class="contact-info"> <!-- Contact information -->
+            <p>Email: jaf375@pitt.edu</p>
+            <p>Phone: (910) 286-4311</p>
+        </div>
+    </div>
+  </footer>
+  <script>  
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => { 
+        navLinks.classList.toggle('active'); 
+    });
+  </script>
+</body>
+</html>
