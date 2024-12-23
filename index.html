@@ -24,7 +24,7 @@
     </header>
   <main>
     <section class="hello">
-      <h1>Welcome to my CyberSec Blog</h1>
+      <h1>Welcome to CyberSec Blog</h1>
       <p>Your source for the latest in cybersecurity news, tips, and resources.</p>
       <a href="articles.html" class="btn">Explore Articles</a>
     </section>
@@ -49,6 +49,48 @@
         </div>
       </div>
     </section>
+
+    <section class="featured-tools">
+      <h2>Featured Tools</h2>
+      <div class="tools-grid">
+        <div class="tool">
+          <img src="images/kali-linux.jpg" alt="Kali Linux">
+          <h3><a href="https://www.kali.org" target="_blank">Kali Linux</a></h3>
+          <p>Kali Linux is a Debian-based Linux distribution aimed at advanced Penetration Testing and Security Auditing.</p>
+        </div>
+        <div class="tool">
+          <img src="images/wireshark.jpg" alt="Wireshark">
+          <h3><a href="https://www.wireshark.org" target="_blank">Wireshark</a></h3>
+          <p>Wireshark is the world's foremost and widely-used network protocol analyzer.</p>
+        </div>
+        <div class="tool">
+          <img src="images/metasploit.jpg" alt="Metasploit">
+          <h3><a href="https://www.metasploit.com" target="_blank">Metasploit</a></h3>
+          <p>The Metasploit Framework is the most commonly used penetration testing tool in the world.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-guides">
+      <h2>Featured Guides</h2>
+      <div class="guides-grid">
+        <div class="guide">
+          <img src="images/owasp.jpg" alt="OWASP">
+          <h3><a href="https://www.owasp.org" target="_blank">OWASP</a></h3>
+          <p>The Open Web Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software.</p>
+        </div>
+        <div class="guide">
+          <img src="images/sans.jpg" alt="SANS Institute">
+          <h3><a href="https://www.sans.org" target="_blank">SANS Institute</a></h3>
+          <p>The SANS Institute is a cooperative research and education organization that provides cybersecurity training and certification.</p>
+        </div>
+        <div class="guide">
+          <img src="images/cis.jpg" alt="CIS">
+          <h3><a href="https://www.cisecurity.org" target="_blank">Center for Internet Security (CIS)</a></h3>
+          <p>The CIS is a nonprofit organization focused on enhancing the cybersecurity readiness and response of public and private sector entities.</p>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="footer-content">
@@ -59,16 +101,20 @@
             <a href="https://www.instagram.com/julianflorezcamel/" target="_blank" class="social-icon">
                 <img src="images/instagram.png" alt="Instagram">
             </a>
-            </div>
-            <div class="contact-info">
-                <p>Email: jaf375@pitt.edu</p>
-                <p>Phone: (910) 286-4311</p>
-            </div>
-            <div class="legal-info">
-                <p>&copy; 2024 CyberSec Blog. All rights reserved.</p>
-                <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
-            </div>
         </div>
-    </footer>
+        <div class="contact-info">
+            <p>Email: jaf375@pitt.edu</p>
+            <p>Phone: (910) 286-4311</p>
+        </div>
+    </div>
+  </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
